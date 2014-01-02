@@ -1,0 +1,4 @@
+#!/bin/bash -e
+
+
+git log -p --no-prefix

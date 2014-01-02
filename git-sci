@@ -1,0 +1,4 @@
+#!/bin/bash -e
+
+
+git onmaster && git svn dcommit

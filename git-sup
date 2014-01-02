@@ -1,0 +1,5 @@
+#!/bin/bash -e
+
+
+git onmaster && git svn rebase
+

@@ -1,0 +1,7 @@
+#!/bin/bash -e
+
+# Prints name of the current branch
+
+git br | grep "*" | cut -c3-
+
+

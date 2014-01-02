@@ -1,0 +1,3 @@
+#!/bin/bash -e
+
+git log --format=format:"%cd	%C(yellow dim)%h	%Cgreen%an	%Creset%s" "$@"

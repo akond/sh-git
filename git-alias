@@ -1,0 +1,4 @@
+#!/bin/bash -e
+
+
+git config -l | grep alias | sed 's/^alias.//' | sed -r 's/^([a-z]+)=/\1       /' | sed 's/^/  /' |  sort
