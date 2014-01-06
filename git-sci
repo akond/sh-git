@@ -1,4 +1,6 @@
 #!/bin/bash -e
 
 
+# Commits to the SVN repository
+
 git onmaster && git svn dcommit

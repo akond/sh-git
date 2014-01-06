@@ -1,4 +1,6 @@
 #!/bin/bash -e
 
 
+# Show changes between commits with true file names.
+
 git show --no-prefix

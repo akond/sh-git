@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-# Prints name of the current branch
+# Prints current branch name
 
 git br | grep "*" | cut -c3-
 

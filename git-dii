@@ -1,4 +1,6 @@
 #!/bin/bash -e
 
 
-git diff --cached
+# Prints diff between the index and the head.
+
+git diff --cached --no-prefix

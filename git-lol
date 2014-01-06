@@ -1,3 +1,6 @@
 #!/bin/bash -e
 
+
+# Prints one liner format log
+
 git log --format=format:"%cd	%C(yellow dim)%h	%Cgreen%an	%Creset%s" "$@"

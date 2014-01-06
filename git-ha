@@ -1,5 +1,6 @@
 #!/bin/bash -e
 
 
+# Prints help screen with all GIT commands available
 
 git help -a

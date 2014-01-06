@@ -1,4 +1,6 @@
 #!/bin/bash -e
 
 
+# Checkouts the master branch
+
 git checkout master; git branch

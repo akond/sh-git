@@ -1,4 +1,6 @@
 #!/bin/bash -e
 
 
+# Shows diff of the stashed commit given by index.
+
 git stash show --patch stash@{$1}

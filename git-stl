@@ -1,4 +1,6 @@
 #!/bin/bash -e
 
 
+# Shows stashed commits
+
 git stash list

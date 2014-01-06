@@ -1,6 +1,8 @@
 #!/bin/bash -e
 
 
+# Checks if the current branch is master
+
 CURRENT_BRANCH=`git cbr`
 
 if [ $CURRENT_BRANCH != master ]

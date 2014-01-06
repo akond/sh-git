@@ -1,4 +1,6 @@
 #!/bin/bash -e
 
 
+# Prints the diff with no context
+
 git diff --no-prefix -w -U0
