@@ -1,0 +1,8 @@
+#!/bin/bash -ev
+
+
+# Prints the log including changed file names.
+
+author=$1
+shift
+git log --name-status --author=$author $*

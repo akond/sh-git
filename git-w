@@ -3,4 +3,4 @@
 
 # Prints the log including changed file names.
 
-git log --name-status
+git log --name-status $*

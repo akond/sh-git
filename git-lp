@@ -3,4 +3,4 @@
 
 # Prints the log of diffs
 
-git log -p --no-prefix
+git log -p --no-prefix $*
