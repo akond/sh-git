@@ -3,4 +3,17 @@
 
 # Commits to the SVN repository
 
-git onmaster && git stash && git svn dcommit && git cont
+git onmaster
+
+# Save the updates, if any, since they prohibit to make a commit
+ID=`git stn`
+git stash
+
+git svn dcommit
+
+if [ "$ID" != `git stn` ]
+then
+	# Restore the saved patch, if any
+	git cont
+fi
+
