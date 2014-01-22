@@ -3,4 +3,4 @@
 
 # Commits to the SVN repository
 
-git onmaster && git svn dcommit
+git onmaster && git stash && git svn dcommit && git cont

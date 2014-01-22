@@ -3,4 +3,4 @@
 
 # Show changes between commits with true file names.
 
-git show --no-prefix
+git show --no-prefix $*
