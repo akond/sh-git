@@ -1,5 +1,6 @@
 #!/bin/bash -e
 
+# The motto: Current BRanch
 # Prints current branch name
 
 git br | grep "*" | cut -c3-

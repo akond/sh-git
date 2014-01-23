@@ -1,7 +1,9 @@
 #!/bin/bash -e
 
 
+# The motto: Svn UPdate
 # Update SVN repository
 
-git onmaster && git svn rebase
+git onmaster
+git svn rebase
 

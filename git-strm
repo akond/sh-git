@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-
+# The motto: STash ReMove
 # Removes the stashed commit given by index.
 
 git stash drop stash@{$1}

@@ -7,6 +7,6 @@ CURRENT_BRANCH=`git cbr`
 
 if [ $CURRENT_BRANCH != master ]
 then
-	echo "You must be on master in order to run this command."
+	echo "You must be on the master branch in order to run this command."
 	exit 1
 fi

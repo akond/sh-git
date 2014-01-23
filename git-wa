@@ -1,8 +1,15 @@
-#!/bin/bash -ev
+#!/bin/bash -e
 
 
 # Prints the log including changed file names.
 
 author=$1
+
+if [ "$author" == "" ]
+then
+	git w
+	exit
+fi
+
 shift
 git log --name-status --author=$author $*

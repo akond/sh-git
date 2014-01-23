@@ -3,4 +3,5 @@
 
 # Checkouts the master branch
 
-git checkout master; git branch
+git checkout master
+git branch

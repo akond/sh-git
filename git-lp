@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-
+# The motto: Log Patches
 # Prints the log of diffs
 
 git log -p --no-prefix $*

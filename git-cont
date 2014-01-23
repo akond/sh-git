@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-
+# The motto: CONTinue
 # Checks out the latetest stashed commit.
 
 git stash pop

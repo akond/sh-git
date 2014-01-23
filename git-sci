@@ -1,11 +1,11 @@
 #!/bin/bash -e
 
-
+# The motto: Svn CommIt
 # Commits to the SVN repository
 
 git onmaster
 
-# Save the updates, if any, since they prohibit to make a commit
+# Save the updates, if any, since they prohibit us to make a commit
 ID=`git stn`
 git stash
 

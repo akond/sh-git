@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-
+# The motto: STash show Patch
 # Shows diff of the stashed commit given by index.
 
 git stash show --patch stash@{$1}
