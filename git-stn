@@ -4,3 +4,4 @@
 # Return the hash of the last stashed patch
 
 git stash list --oneline --format=%H -1
+

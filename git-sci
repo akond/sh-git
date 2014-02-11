@@ -11,7 +11,8 @@ git stash
 
 git svn dcommit
 
-if [ "$ID" != `git stn` ]
+ID2=`git stn`
+if [ "$ID" != "$ID2" ]
 then
 	# Restore the saved patch, if any
 	git cont

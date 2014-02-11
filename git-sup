@@ -5,5 +5,20 @@
 # Update SVN repository
 
 git onmaster
+
+# Save the updates, if any, since they prohibit us to make a commit
+ID=`git stn`
+git stash
+
 git svn rebase
+
+ID2=`git stn`
+if [ "$ID" != "$ID2" ]
+then
+	# Restore the saved patch, if any
+	git cont
+fi
+
+
+
 
