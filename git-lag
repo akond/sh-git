@@ -1,0 +1,5 @@
+#!/bin/bash -e
+
+# The motto: Log All Graph
+
+git log --all --graph

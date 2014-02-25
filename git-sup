@@ -4,7 +4,7 @@
 # The motto: Svn UPdate
 # Update SVN repository
 
-git onmaster
+git svnbr || git onmaster
 
 # Save the updates, if any, since they prohibit us to make a commit
 ID=`git stn`

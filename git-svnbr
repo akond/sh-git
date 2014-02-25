@@ -1,0 +1,15 @@
+#!/bin/bash -e
+
+
+# Checks if the current branch is of svn kind
+
+BRANCH=`git cbr`
+MATCH=`expr match "$BRANCH" "svn"`
+
+if [ $MATCH -eq 3 ]
+then
+	exit 0
+else
+	exit 1
+fi
+
