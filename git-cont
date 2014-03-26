@@ -3,4 +3,7 @@
 # The motto: CONTinue
 # Checks out the latetest stashed commit.
 
-git stash pop
+i=$1
+i=${i:=0}
+git stash pop stash@\{$i}
+
