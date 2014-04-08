@@ -1,0 +1,7 @@
+#!/bin/bash -e
+
+# The motto: Branch
+
+git branch -r $*
+
+

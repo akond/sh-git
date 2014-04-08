@@ -1,0 +1,5 @@
+#!/bin/bash -e
+
+# The motto: Log One Line of the Branch
+
+git lol master..
