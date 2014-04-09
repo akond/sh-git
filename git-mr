@@ -1,0 +1,5 @@
+#!/bin/bash -e
+
+# merge
+
+git merge --no-ff $*
