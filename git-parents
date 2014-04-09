@@ -1,0 +1,6 @@
+#!/bin/bash -e
+
+
+# Prints parents of the merger
+
+git show --pretty=raw $1
