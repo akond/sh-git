@@ -1,4 +1,4 @@
 #!/bin/bash -e
 
 
-git diff --no-prefix
+git diff --no-prefix $*
