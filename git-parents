@@ -3,4 +3,4 @@
 
 # Prints parents of the merger
 
-git show --pretty=raw $1
+git show --pretty=raw $* | grep ^parent | awk '{print $2;}' | cat -n
