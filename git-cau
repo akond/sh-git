@@ -1,0 +1,4 @@
+#!/bin/bash -e
+
+git commit -a -m "Minor fixes" $*
+

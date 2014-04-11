@@ -1,0 +1,6 @@
+#!/bin/bash -e
+
+
+# Status
+
+git status $*
