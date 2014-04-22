@@ -3,6 +3,6 @@
 # The motto: Current BRanch
 # Prints current branch name
 
-git br | grep "*" | cut -c3-
+git br --no-color | grep "*" | cut -c3-
 
 

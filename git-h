@@ -2,4 +2,4 @@
 
 # The motto: Help
 
-git help
+git help $*
