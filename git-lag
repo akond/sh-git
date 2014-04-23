@@ -2,4 +2,4 @@
 
 # The motto: Log All Graph
 
-git log --all --graph $*
+git log --all --graph --decorate=full $*
