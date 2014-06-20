@@ -1,0 +1,12 @@
+#!/bin/bash -e
+
+
+filename=$1
+
+if [ "$filename" == "" ]
+then
+	filename+=`pwgen 5 1`
+fi
+filename=`date +%FT%T`-$filename
+
+git diff --no-prefix > tmp.$filename.patch
