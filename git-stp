@@ -3,4 +3,4 @@
 # The motto: STash show Patch
 # Shows diff of the stashed commit given by index.
 
-git stash show --patch stash@{$1}
+git stash show --no-prefix --patch stash@{$1}
