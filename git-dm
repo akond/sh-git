@@ -1,0 +1,10 @@
+#!/bin/bash -e
+
+# motto: show changes brought by merge
+
+MERGE=$1
+test -n "$MERGE"
+
+PARENTS=`git log -1 $MERGE |grep Merge| head -n 1| cut -c 8-`
+BASE=`git merge-base $PARENTS`
+git diff $BASE..master
