@@ -1,5 +1,5 @@
 #!/bin/bash -e
 
-# The motto: Help
+# The motto: Show most used commands
 
 git help $*

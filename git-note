@@ -1,6 +1,8 @@
 #!/bin/bash -e
 
 
+# The motto: Create a patch file holding current changes
+
 filename=$1
 
 if [ "$filename" == "" ]

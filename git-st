@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
 
-# Status
+# The motto: Status
 
 git status $*

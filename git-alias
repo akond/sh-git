@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
 
-# Prints all the defined aliases and their definitions
+# The motto: Prints all the defined aliases and their definitions
 
 git config -l | grep alias | sed 's/^alias.//' | sed -r 's/^([a-z]+)=/\1       /' | sed 's/^/  /' |  sort

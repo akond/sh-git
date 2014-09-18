@@ -1,44 +1,53 @@
 sh-git
-======
+=========
+
 
 My git speed dial functions
 
-* `git-alias` - Print all available aliases
-* `git-ap` - Add changes to the index interactivelly
-* `git-bad` - Mark the commit as a bad one during `git bisect`
-* `git-br` - Alias for `git branch`
-* `git-bra` - Alias for `git branch -a`
-* `git-brr` - Alias for `git branch -r`
-* `git-ca` - Alias for `git commit -a`
-* `git-cau` - Alias for `git commit -a -m "Minor fixes"`
-* `git-cbr` - Print the name of the current branch
-* `git-ci` - Alias for `git commit`
-* `git-co` - Alias for `git checkout`
-* `git-cont` - Check out the latest stashed commit
-* `git-cu` - Alias for `git commit -m "Minor fixes"`
-* `git-di` - Alias for `git diff`
-* `git-dii` - Alias for `git diff --cached`
-* `git-dio` - Just like `git di`, but ignoring changes of whitespaces.
-* `git-good` - Mark the commit as a good one during `git bisect`
-* `git-h` - `git help`
-* `git-ha` - `git help -a`
-* `git-lag` - Log all branches with graphical representations.
-* `git-lob` - Log commits in the current branch only
-* `git-lol` - Log commits in one line each.
-* `git-lp` - Print log with diffs
-* `git-ma` - Checkout the master branch
-* `git-mr` - `git merge`
-* `git-onmaster` - Make sure you are on the master branch. Used internally.
-* `git-parents` - Print parents of the merge commit in numbered order.
-* `git-pl` - Alias for `git pull --ff-only`
-* `git-sci` - SVN commit
-* `git-sh` - `git show`
-* `git-st` - `git status`
-* `git-stl` - Show stashed commits.
-* `git-stn` 
-* `git-stp` 
-* `git-strm` 
-* `git-sup` - SVN update
-* `git-svnbr` - Checks if the current branch is of svn kind. Used internally.
-* `git-w` - Log that prints the names of changed files.
-* `git-wa` - `git w` for a given author
+* `git-alias` - Prints all the defined aliases and their definitions
+* `git-ap` - Interactively add sources to the index
+* `git-bad` - No description yet
+* `git-br` - Branch
+* `git-bra` - Branch all
+* `git-brr` - Branch
+* `git-ca` - Commit all
+* `git-can` - Recommit the last commit with addition of current changes
+* `git-cau` - Commit all the changes with the standard message
+* `git-cbr` - Prints the current branch name
+* `git-ci` - The alias for `git commit`
+* `git-co` - The alias for `git checkout`
+* `git-cont` - Checks out the latetest stashed commit.
+* `git-cu` - Commit with the standard message
+* `git-dev` - Checkouts the develop branch
+* `git-di` - Show current changes
+* `git-dii` - Prints diff between the index and the head.
+* `git-dio` - Prints the diff with no context
+* `git-dm` -  show changes brought by merge
+* `git-fall` - Fetch all the changes
+* `git-ff` - The alias for `flow feature`
+* `git-good` - No description yet
+* `git-grip` - Find occurences of a string accompanied by number line.
+* `git-h` - Show most used commands
+* `git-ha` - Show all available commands
+* `git-lag` - Log All Graph
+* `git-lob` - Log One Line of the Branch
+* `git-lol` - Prints the log in one line per entry
+* `git-lp` - Prints the log of diffs
+* `git-ma` - Checkouts the master branch
+* `git-mr` - Merge with no fast-forward
+* `git-note` - Create a patch file holding current changes
+* `git-onmaster` - Checks if the current branch is master
+* `git-parents` - Prints parents of the merger
+* `git-pl` - Fast-forward only pull
+* `git-sci` - Svn CommIt
+* `git-sh` - Show changes between commits with true file names.
+* `git-st` - Status
+* `git-stl` - Shows stashed commits
+* `git-stn` - Return the hash of the last stashed patch
+* `git-stp` - STash show Patch
+* `git-strm` - STash ReMove
+* `git-sup` - Svn UPdate
+* `git-svnbr` - Checks if the current branch is of svn kind
+* `git-unchanged` - Marks files as unchanged
+* `git-w` - Prints the log including changed file names.
+* `git-wa` - Prints the log including changed file names.

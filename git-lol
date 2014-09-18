@@ -1,6 +1,5 @@
 #!/bin/bash -e
 
-# The motto: Log One Line
-# Prints one liner format log
+# The motto: Prints the log in one line per entry
 
 git log --format=format:"%cd	%C(yellow dim)%h	%Cgreen%an	%Creset%s" "$@"

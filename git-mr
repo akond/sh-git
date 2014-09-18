@@ -1,5 +1,5 @@
 #!/bin/bash -e
 
-# merge
+# The motto: Merge with no fast-forward
 
 git merge --no-ff $*

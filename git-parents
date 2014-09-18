@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
 
-# Prints parents of the merger
+# The motto: Prints parents of the merger
 
 git show --pretty=raw $* | grep ^parent | awk '{print $2;}' | cat -n

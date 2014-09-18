@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
 
-# Shows stashed commits
+# The motto: Shows stashed commits
 
 git stash list

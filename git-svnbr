@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 
-# Checks if the current branch is of svn kind
+# The motto: Checks if the current branch is of svn kind
 
 BRANCH=`git cbr`
 MATCH=`expr match "$BRANCH" "svn"`

@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
 
-# Marks files as unchanged
+# The motto: Marks files as unchanged
 
 git update-index --assume-unchanged "$@"

@@ -1,6 +1,7 @@
 #!/bin/bash -e
 
-# motto: show changes brought by merge
+
+# The motto:  show changes brought by merge
 
 MERGE=$1
 test -n "$MERGE"

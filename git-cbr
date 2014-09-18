@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
-# The motto: Current BRanch
-# Prints current branch name
+
+# The motto: Prints the current branch name
 
 git br --no-color | grep "*" | cut -c3-
 

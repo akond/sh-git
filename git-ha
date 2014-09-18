@@ -1,6 +1,5 @@
 #!/bin/bash -e
 
-# The motto: Help All
-# Prints help screen with all GIT commands available
+# The motto: Show all available commands
 
 git help -a

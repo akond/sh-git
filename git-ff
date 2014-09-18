@@ -1,4 +1,7 @@
 #!/bin/bash -e
 
+
+# The motto: The alias for `flow feature`
+
 git flow feature $*
 

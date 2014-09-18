@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-# The motto: Pull
+# The motto: Fast-forward only pull
 
 git pull --ff-only || echo "Был коммит в ветке. Скорее всего это было сделано по ошибке."
 

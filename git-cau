@@ -1,4 +1,7 @@
 #!/bin/bash -e
 
+
+# The motto: Commit all the changes with the standard message
+
 git commit -a -m "Minor fixes" $*
 

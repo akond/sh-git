@@ -1,5 +1,5 @@
 #!/bin/bash -e
 
-# Interactively add sources to the index
+# The motto: Interactively add sources to the index
 
 git add -p

@@ -1,4 +1,7 @@
 #!/bin/bash -e
 
+
+# The motto: Commit all
+
 git commit -a $*
 

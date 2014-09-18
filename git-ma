@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 
-# Checkouts the master branch
+# The motto: Checkouts the master branch
 
 git checkout master
 git branch
