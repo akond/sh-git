@@ -1,7 +1,6 @@
 sh-git
 =========
 
-
 My git speed dial functions
 
 * `git-alias` - Prints all the defined aliases and their definitions

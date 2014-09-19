@@ -3,4 +3,4 @@
 
 # The motto: Prints the diff with no context
 
-git diff --no-prefix -w -U0
+git diff --no-prefix -w -U0 $*
