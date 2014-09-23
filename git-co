@@ -1,7 +1,32 @@
-#!/bin/bash -e
+#!/bin/bash 
 
 
 # The motto: The alias for `git checkout`
 
-git checkout $*
+verify(){
+	ID=`git rev-parse --verify -q $1 || echo ""`
+	if [ "$ID" == "" ]
+	then
+		return 1
+	fi
+	return 0
+}
 
+if [ "$#" == "1" ]
+then
+	verify $1
+	TEST_THIS_BRANCH=$?
+
+	ALT="feature/$1"
+
+	verify $ALT
+	TEST_ALT_BRANCH=$?
+
+	if [ "$TEST_THIS_BRANCH" != "0" -a "$TEST_ALT_BRANCH" == "0" ]
+	then
+		git checkout $ALT
+		exit
+	fi
+fi
+
+git checkout $*
