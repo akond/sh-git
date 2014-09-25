@@ -1,0 +1,5 @@
+#!/bin/bash -e
+
+# The motto: Log only merges
+
+git log --merges --format=format:"%cd	%C(yellow dim)%h	%Cgreen%an	%Creset%s" "$@"

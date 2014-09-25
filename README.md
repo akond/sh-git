@@ -21,7 +21,6 @@ My git speed dial functions
 * `git-di` - Show current changes
 * `git-dii` - Prints diff between the index and the head.
 * `git-dio` - Prints the diff with no context
-* `git-dm` -  show changes brought by merge
 * `git-fall` - Fetch all the changes
 * `git-ff` - The alias for `flow feature`
 * `git-good` - No description yet
@@ -31,6 +30,7 @@ My git speed dial functions
 * `git-lag` - Log All Graph
 * `git-lob` - Log One Line of the Branch
 * `git-lol` - Prints the log in one line per entry
+* `git-lom` - Log only merges
 * `git-lp` - Prints the log of diffs
 * `git-ma` - Checkouts the master branch
 * `git-mr` - Merge with no fast-forward
@@ -40,6 +40,7 @@ My git speed dial functions
 * `git-pl` - Fast-forward only pull
 * `git-sci` - Svn CommIt
 * `git-sh` - Show changes between commits with true file names.
+* `git-shm` -  show changes brought by merge
 * `git-st` - Status
 * `git-stl` - Shows stashed commits
 * `git-stn` - Return the hash of the last stashed patch

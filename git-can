@@ -3,5 +3,5 @@
 
 # The motto: Recommit the last commit with addition of current changes
 
-git commit -a --amend --no-edit $*
+git commit --amend --no-edit $*
 
