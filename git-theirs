@@ -1,0 +1,6 @@
+#!/bin/bash -e
+
+# The motto: Choose their version of the file
+
+git checkout --theirs $1
+git add $1

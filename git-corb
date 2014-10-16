@@ -1,0 +1,5 @@
+#!/bin/bash -e
+
+# The motto: Continue rebase
+
+git rebase --continue

@@ -13,9 +13,11 @@ My git speed dial functions
 * `git-can` - Recommit the last commit with addition of current changes
 * `git-cau` - Commit all the changes with the standard message
 * `git-cbr` - Prints the current branch name
+* `git-ce` - Edit last commit
 * `git-ci` - The alias for `git commit`
 * `git-co` - The alias for `git checkout`
 * `git-cont` - Checks out the latetest stashed commit.
+* `git-corb` - Continue rebase
 * `git-cu` - Commit with the standard message
 * `git-dev` - Checkouts the develop branch
 * `git-di` - Show current changes
@@ -48,6 +50,7 @@ My git speed dial functions
 * `git-strm` - STash ReMove
 * `git-sup` - Svn UPdate
 * `git-svnbr` - Checks if the current branch is of svn kind
+* `git-theirs` - Choose their version of the file
 * `git-unchanged` - Marks files as unchanged
 * `git-w` - Prints the log including changed file names.
 * `git-wa` - Prints the log including changed file names.
