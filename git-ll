@@ -1,0 +1,5 @@
+#!/bin/bash -e
+
+# The motto: Print long format log
+
+git log --decorate=full --no-prefix "$@"

@@ -3,13 +3,11 @@
 
 # The motto: Prints the log including changed file names.
 
-author=$1
+author=${1:-$USER}
 
-if [ "$author" == "" ]
+if [ "$#" != "0" ]
 then
-	git w
-	exit
+	shift
 fi
 
-shift
 git log --name-status --author=$author $*
