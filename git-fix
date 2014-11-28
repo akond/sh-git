@@ -1,0 +1,9 @@
+#!/bin/bash -e
+
+
+# The motto: Apply fixture patches
+
+for i in tmp.fixture/*.patch
+do
+	$SHELL -c "patch -p0 < $i"
+done
