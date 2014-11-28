@@ -1,0 +1,10 @@
+#!/bin/bash -e
+
+
+# The motto: Set files to their previous contents.
+COMMIT=$(git rev-parse HEAD)
+
+for i in $*
+do
+	git show ${COMMIT}^:$i > $i
+done

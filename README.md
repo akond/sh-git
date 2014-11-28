@@ -25,11 +25,13 @@ My git speed dial functions
 * `git-dio` - Prints the diff with no context
 * `git-fall` - Fetch all the changes
 * `git-ff` - The alias for `flow feature`
+* `git-fix` - Apply fixture patches
 * `git-good` - No description yet
 * `git-grip` - Find occurences of a string accompanied by number line.
 * `git-h` - Show most used commands
 * `git-ha` - Show all available commands
 * `git-lag` - Log All Graph
+* `git-ll` - Print long format log
 * `git-lob` - Log One Line of the Branch
 * `git-lol` - Prints the log in one line per entry
 * `git-lom` - Log only merges
@@ -40,6 +42,7 @@ My git speed dial functions
 * `git-onmaster` - Checks if the current branch is master
 * `git-parents` - Prints parents of the merger
 * `git-pl` - Fast-forward only pull
+* `git-return` - Set files to their previous contents.
 * `git-sci` - Svn CommIt
 * `git-sh` - Show changes between commits with true file names.
 * `git-shm` -  show changes brought by merge
