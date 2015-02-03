@@ -8,7 +8,7 @@ My git speed dial functions
 * `git-bad` - No description yet
 * `git-br` - Branch
 * `git-bra` - Branch all
-* `git-brr` - Branch
+* `git-brr` - The list of remote branches
 * `git-ca` - Commit all
 * `git-can` - Recommit the last commit with addition of current changes
 * `git-cau` - Commit all the changes with the standard message

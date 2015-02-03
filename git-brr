@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-# The motto: Branch
+# The motto: The list of remote branches
 
 git branch -r $*
 

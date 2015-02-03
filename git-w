@@ -3,4 +3,4 @@
 
 # The motto: Prints the log including changed file names.
 
-git log --name-status $*
+git log --decorate=full --name-status $*
