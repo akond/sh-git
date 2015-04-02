@@ -1,0 +1,7 @@
+#!/bin/bash -e
+
+
+# The motto: Show file starting with certain line
+# Description: It is supposed to receive input from git grip
+
+less -N `echo $* | awk -F : '/:/ {print "+"$2" "$1 ;} /[^:]/ { print $1; }'`

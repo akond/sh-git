@@ -1,0 +1,10 @@
+CYAN='echo -en \033[0;36m'
+RESET='echo -en \033[0m'
+TAB='echo -en \t'
+header() {
+	$CYAN; echo $1 ; $RESET
+}
+
+tab() {
+echo -ne "\t"
+}

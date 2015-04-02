@@ -1,0 +1,16 @@
+#!/bin/bash -e
+
+
+# The motto: Some statistics about branch
+# Description:
+
+source $(dirname $0)/colors
+
+echo
+header "Statistics for branch"
+tab; git cbr
+
+header "Commits by author:"
+git log --pretty="%an" develop..|sort|uniq -c
+header "Number of files were added:"
+tab; git log --find-renames --name-status --diff-filter=A develop..|grep ^A\\b | wc -l

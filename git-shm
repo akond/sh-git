@@ -6,6 +6,12 @@
 MERGE=$1
 test -n "$MERGE"
 
+BR=`git cbr`
+echo $BR
 PARENTS=`git log -1 $MERGE |grep Merge| head -n 1| cut -c 8-`
+echo $PARENTS
 BASE=`git merge-base $PARENTS`
-git diff $BASE..master
+echo $BASE
+git merge-base --fork-point $BASE $BR
+exit
+git diff $BASE..$BR

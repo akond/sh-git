@@ -1,0 +1,6 @@
+#!/bin/bash -e
+
+
+# The motto: The list of files that have been added in the branch
+
+git log --find-renames=10 --name-status --diff-filter=A --no-decorate  --ignore-missing  --pretty="%n" develop.. | awk '{print $2;}' | grep . | sort -b

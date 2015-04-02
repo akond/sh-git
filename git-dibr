@@ -1,0 +1,6 @@
+#!/bin/bash -e
+
+
+# The motto: Prints the difference between develop and the current branch
+
+git diff --no-prefix --find-renames=10 -w -U0 develop...

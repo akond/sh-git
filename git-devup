@@ -1,0 +1,12 @@
+#!/bin/bash -e
+
+
+# The motto: Update the develop branch, and the branch we are currently on
+
+BRANCH=`git cbr`
+
+git checkout .
+git checkout develop
+git pull
+git checkout $BRANCH
+git pull
