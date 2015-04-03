@@ -3,6 +3,12 @@
 
 # The motto: The alias for `git checkout`
 
+default_checkout () {
+	echo "Commencing the default checkout"
+	git checkout $*
+	exit
+}
+
 try_checkout() {
 	ID=`git rev-parse --verify -q $1 || echo ""`
 	if [ "$ID" == "" ]
@@ -12,13 +18,16 @@ try_checkout() {
 	fi
 	echo "Checking out $*"
 	git checkout $1
+	git dibst
 	exit
 }
 
-if [ "$#" != "1" ]
-then
-	echo "Commencing the default checkout"
-	git checkout $*
+if [ "$#" != "1" ] || [ "$#" == "0" ]; then
+	default_checkout $*
+fi
+
+if [ "$#" == "1" ] && [ "$1" == "." ]; then
+	default_checkout $*
 fi
 
 try_checkout $1
@@ -26,6 +35,11 @@ try_checkout "feature/$1"
 
 ALTERNATIVES=`git brr | grep -w $1 | awk '{ print gensub("origin/", "", $1); }'| tr -d '\n'`
 ALTERNATIVESCOUNT=`echo $ALTERNATIVES | wc -w`
+
+if [ "$ALTERNATIVESCOUNT" == "0" ]; then
+	echo "Exiting"
+	exit
+fi
 
 if [ "$ALTERNATIVESCOUNT" == "1" ]; then
 	try_checkout $ALTERNATIVES
