@@ -1,32 +1,46 @@
-#!/bin/bash 
+#!/bin/bash
 
 
 # The motto: The alias for `git checkout`
 
-verify(){
+try_checkout() {
 	ID=`git rev-parse --verify -q $1 || echo ""`
 	if [ "$ID" == "" ]
 	then
+		echo "Could not find $1"
 		return 1
 	fi
-	return 0
+	echo "Checking out $*"
+	git checkout $1
+	exit
 }
 
-if [ "$#" == "1" ]
+if [ "$#" != "1" ]
 then
-	verify $1
-	TEST_THIS_BRANCH=$?
-
-	ALT="feature/$1"
-
-	verify $ALT
-	TEST_ALT_BRANCH=$?
-
-	if [ "$TEST_THIS_BRANCH" != "0" -a "$TEST_ALT_BRANCH" == "0" ]
-	then
-		git checkout $ALT
-		exit
-	fi
+	echo "Commencing the default checkout"
+	git checkout $*
 fi
 
-git checkout $*
+try_checkout $1
+try_checkout "feature/$1"
+
+ALTERNATIVES=`git brr | grep -w $1 | awk '{ print gensub("origin/", "", $1); }'| tr -d '\n'`
+ALTERNATIVESCOUNT=`echo $ALTERNATIVES | wc -w`
+
+if [ "$ALTERNATIVESCOUNT" == "1" ]; then
+	try_checkout $ALTERNATIVES
+fi
+
+DIALOG=""
+for i in $ALTERNATIVES
+do
+	DIALOG="$DIALOG $i off"
+done
+
+SELECTION=`dialog --no-items --radiolist "What to checkout?" 20 100 19 $DIALOG 3>&1 1>&2 2>&3 3>&-`
+if [ -z "$SELECTION" ]; then
+	echo "No selection"
+	exit
+fi
+
+try_checkout $SELECTION
