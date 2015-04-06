@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # The motto: The alias for `git checkout`
 
 default_checkout () {
@@ -9,18 +8,26 @@ default_checkout () {
 	exit
 }
 
+parse_id() {
+	PARSEDID=$1
+	ID=`git rev-parse --verify -q $PARSEDID || echo ""`
+}
+
 try_checkout() {
-	ID=`git rev-parse --verify -q $1 || echo ""`
+	TRYID=$1
+	parse_id $TRYID
 	if [ "$ID" == "" ]
 	then
-		echo "Could not find $1"
+		echo "Could not find $TRYID"
 		return 1
 	fi
 	echo "Checking out $*"
-	git checkout $1
+	git checkout $TRYID
 	git dibst
 	exit
 }
+
+COMMIT=$1
 
 if [ "$#" != "1" ] || [ "$#" == "0" ]; then
 	default_checkout $*
@@ -30,10 +37,10 @@ if [ "$#" == "1" ] && [ "$1" == "." ]; then
 	default_checkout $*
 fi
 
-try_checkout $1
-try_checkout "feature/$1"
+try_checkout "$COMMIT"
+try_checkout "feature/$COMMIT"
 
-ALTERNATIVES=`git brr | grep -w $1 | awk '{ print gensub("origin/", "", $1); }'| tr -d '\n'`
+ALTERNATIVES=`git brr | grep -w $COMMIT | awk '{ print gensub("origin/", "", $1); }'| tr -d '\n'`
 ALTERNATIVESCOUNT=`echo $ALTERNATIVES | wc -w`
 
 if [ "$ALTERNATIVESCOUNT" == "0" ]; then
@@ -43,18 +50,21 @@ fi
 
 if [ "$ALTERNATIVESCOUNT" == "1" ]; then
 	try_checkout $ALTERNATIVES
+	default_checkout $ALTERNATIVES
 fi
 
 DIALOG=""
+j=0
 for i in $ALTERNATIVES
 do
-	DIALOG="$DIALOG $i off"
+	j=$((j+1))
+	DIALOG="$DIALOG $i $j off"
 done
 
-SELECTION=`dialog --no-items --radiolist "What to checkout?" 20 100 19 $DIALOG 3>&1 1>&2 2>&3 3>&-`
+SELECTION=`dialog --radiolist "What to checkout?" 20 100 19 $DIALOG 3>&1 1>&2 2>&3 3>&-`
 if [ -z "$SELECTION" ]; then
 	echo "No selection"
 	exit
 fi
 
-try_checkout $SELECTION
+default_checkout $SELECTION
