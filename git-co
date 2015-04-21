@@ -10,7 +10,7 @@ default_checkout () {
 
 parse_id() {
 	PARSEDID=$1
-	ID=`git rev-parse --verify -q $PARSEDID || echo ""`
+	ID=`git rev-parse --verify -q $PARSEDID 2>/dev/null || echo ""`
 }
 
 try_checkout() {
@@ -18,22 +18,23 @@ try_checkout() {
 	parse_id $TRYID
 	if [ "$ID" == "" ]
 	then
-		echo "Could not find $TRYID"
+		# echo "Could not find $TRYID"
 		return 1
 	fi
 	echo "Checking out $*"
 	git checkout $TRYID
+	# echo $?
 	git dibst
 	exit
 }
 
-COMMIT=$1
-
-if [ "$#" != "1" ] || [ "$#" == "0" ]; then
+if [ "$#" != "1" ]; then
 	default_checkout $*
 fi
 
-if [ "$#" == "1" ] && [ "$1" == "." ]; then
+COMMIT=$1
+echo $COMMIT | egrep -q [[:digit:]]
+if [ "$?" == "1" ]; then
 	default_checkout $*
 fi
 
@@ -44,6 +45,16 @@ ALTERNATIVES=`git brr | grep -w $COMMIT | awk '{ print gensub("origin/", "", $1)
 ALTERNATIVESCOUNT=`echo $ALTERNATIVES | wc -w`
 
 if [ "$ALTERNATIVESCOUNT" == "0" ]; then
+	ALTERNATIVES=`git brr|egrep -e [^[:digit:]]$COMMIT$ -e [^[:digit:]]$COMMIT[^[:digit:]]`
+	ALTERNATIVESCOUNT=`echo $ALTERNATIVES | wc -w`
+fi
+
+# echo $ALTERNATIVES
+# echo $ALTERNATIVESCOUNT
+# exit
+
+if [ "$ALTERNATIVESCOUNT" == "0" ]; then
+	ALTERNATIVES=`git brr|egrep -e [^[:digit:]]$COMMIT$ -e [^[:digit:]]$COMMIT[^[:digit:]]`
 	echo "Exiting"
 	exit
 fi
