@@ -2,10 +2,18 @@
 
 # The motto: The alias for `git checkout`
 
+source $(dirname $0)/colors
+
+bailout() {
+	echo -n "Branch: "; $CYAN; git cbr; $RESET
+	echo $ALTERNATIVES
+	exit
+}
+
 default_checkout () {
 	echo "Commencing the default checkout"
 	git checkout $*
-	exit
+	bailout
 }
 
 parse_id() {
@@ -25,7 +33,7 @@ try_checkout() {
 	git checkout $TRYID
 	# echo $?
 	git dibst
-	exit
+	bailout
 }
 
 if [ "$#" != "1" ]; then
@@ -33,7 +41,7 @@ if [ "$#" != "1" ]; then
 fi
 
 COMMIT=$1
-echo $COMMIT | egrep -q [[:digit:]]
+echo $COMMIT | egrep -q ^[[:digit:]]\{1,4\}$
 if [ "$?" == "1" ]; then
 	default_checkout $*
 fi
@@ -49,14 +57,18 @@ if [ "$ALTERNATIVESCOUNT" == "0" ]; then
 	ALTERNATIVESCOUNT=`echo $ALTERNATIVES | wc -w`
 fi
 
+if [ "$ALTERNATIVESCOUNT" == "0" ]; then
+	ALTERNATIVES=`git br|egrep -e [^[:digit:]]$COMMIT$ -e [^[:digit:]]$COMMIT[^[:digit:]]`
+	ALTERNATIVESCOUNT=`echo $ALTERNATIVES | wc -w`
+fi
+
 # echo $ALTERNATIVES
 # echo $ALTERNATIVESCOUNT
 # exit
 
 if [ "$ALTERNATIVESCOUNT" == "0" ]; then
 	ALTERNATIVES=`git brr|egrep -e [^[:digit:]]$COMMIT$ -e [^[:digit:]]$COMMIT[^[:digit:]]`
-	echo "Exiting"
-	exit
+	bailout
 fi
 
 if [ "$ALTERNATIVESCOUNT" == "1" ]; then
@@ -75,7 +87,7 @@ done
 SELECTION=`dialog --radiolist "What to checkout?" 20 100 19 $DIALOG 3>&1 1>&2 2>&3 3>&-`
 if [ -z "$SELECTION" ]; then
 	echo "No selection"
-	exit
+	bailout
 fi
 
 default_checkout $SELECTION
