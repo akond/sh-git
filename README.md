@@ -55,6 +55,8 @@ My git speed dial functions
 
 * `git-ff` - The alias for `flow feature`
 
+* `git-find` - Find branches a commit is part of
+
 * `git-fix` - Apply fixture patches
 
 * `git-good` - No description yet
@@ -87,6 +89,8 @@ My git speed dial functions
 * `git-note` - Create a patch file holding current changes
 
 * `git-onmaster` - Checks if the current branch is master
+
+* `git-ours` - Choose our version of the file
 
 * `git-parents` - Prints parents of the merger
 

@@ -2,4 +2,4 @@
 
 # The motto: Find occurences of a string accompanied by number line.
 
-git grep -n "$@"
+git grep -I -n "$@"

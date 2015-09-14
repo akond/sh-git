@@ -1,0 +1,6 @@
+#!/bin/bash -e
+
+
+# The motto: Find branches a commit is part of
+
+git branch --contains $1
