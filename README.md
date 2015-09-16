@@ -25,6 +25,8 @@ My git speed dial functions
 
 * `git-ce` - Edit last commit
 
+* `git-ch` - Checkout from history
+
 * `git-ci` - The alias for `git commit`
 
 * `git-co` - The alias for `git checkout`

@@ -1,0 +1,14 @@
+#!/bin/bash -e
+
+# The motto: Checkout from history
+
+DIALOG=`git reflog | grep checkout: | grep -o to.* | head -n 20 | sort | uniq | fmt -w 1 | grep -vw to | cat -n | awk '{print $1, $2, "off";}'`
+
+SELECTION=`dialog --radiolist "What to checkout?" 20 100 19 $DIALOG 3>&1 1>&2 2>&3 3>&-`
+if [ -z "$SELECTION" ]; then
+	echo "No selection"
+	exit
+fi
+
+BRANCH=`echo $DIALOG | fmt -w 1 | grep -w -A 1 $SELECTION | tail -n 1`
+git checkout $BRANCH
