@@ -1,7 +1,6 @@
 #!/bin/bash -e
 
 
-# The motto: Checkouts the develop branch
+# The motto: Checkout the develop branch
 
 git checkout develop
-git branch

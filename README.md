@@ -37,7 +37,7 @@ My git speed dial functions
 
 * `git-cu` - Commit with the standard message
 
-* `git-dev` - Checkouts the develop branch
+* `git-dev` - Checkout the develop branch
 
 * `git-devup` - Update the develop branch, and the branch we are currently on
 
@@ -84,7 +84,7 @@ My git speed dial functions
 
 * `git-lp` - Prints the log of diffs
 
-* `git-ma` - Checkouts the master branch
+* `git-ma` - Checkout the master branch
 
 * `git-mr` - Merge with no fast-forward
 
