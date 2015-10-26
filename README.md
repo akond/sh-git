@@ -53,6 +53,8 @@ My git speed dial functions
 
 * `git-dio` - Prints the diff with no context
 
+* `git-diw` - Show current changes word by word
+
 * `git-fall` - Fetch all the changes
 
 * `git-ff` - The alias for `flow feature`

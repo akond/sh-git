@@ -1,0 +1,6 @@
+#!/bin/bash -e
+
+
+# The motto: Show current changes word by word
+
+git diff --no-prefix --word-diff=color $*
