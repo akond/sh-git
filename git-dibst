@@ -6,6 +6,12 @@
 
 source $(dirname $0)/colors
 
+git rev-parse -q --verify refs/heads/develop > /dev/null
+if [ "$?" == "1" ]
+then
+	exit
+fi
+
 echo
 header "Statistics for branch"
 tab; git cbr

@@ -71,6 +71,8 @@ My git speed dial functions
 
 * `git-ha` - Show all available commands
 
+* `git-kkk` - Header for code review report
+
 * `git-lag` - Log All Graph
 
 * `git-less` - Show file starting with certain line
