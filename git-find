@@ -3,4 +3,4 @@
 
 # The motto: Find branches a commit is part of
 
-git branch --contains $1
+git branch --all --contains $1
