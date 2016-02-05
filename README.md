@@ -71,6 +71,8 @@ My git speed dial functions
 
 * `git-ha` - Show all available commands
 
+* `git-ignore` - Ignore changes in a given file
+
 * `git-kkk` - Header for code review report
 
 * `git-lag` - Log All Graph
@@ -103,6 +105,8 @@ My git speed dial functions
 * `git-pl` - Fast-forward only pull
 
 * `git-return` - Set files to their previous contents.
+
+* `git-sa` - Status of all files
 
 * `git-sci` - Svn CommIt
 

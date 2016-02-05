@@ -3,4 +3,4 @@
 
 # The motto: Status
 
-git status $*
+git status -uno $*

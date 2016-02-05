@@ -1,0 +1,6 @@
+#!/bin/bash -e
+
+
+# The motto: Status of all files
+
+git status $*
