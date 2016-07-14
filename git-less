@@ -4,4 +4,31 @@
 # The motto: Show file starting with certain line
 # Description: It is supposed to receive input from git grip
 
-less -N `echo $* | awk -F : '/:/ {print "+"$2" "$1 ;} /[^:]/ { print $1; }'`
+LESS="less -N"
+F=`echo $* | awk -F : '/:/ {print $1 ;} /^[^:]*$/ { print $1; }'`
+N=`echo $* | awk -F : '/:/ {print $2 ;}'`
+
+print_existing() {
+	if [ "" != "$N" ]; then
+		$LESS +$N $F
+	else
+		$LESS $F
+	fi
+}
+
+find_file() {
+	FF=`git ls-files | grep $F | head -n 1`
+	if [ "" == "$FF" ]; then
+		echo File \"$F\" not found
+		exit
+	else
+		F=$FF
+	fi
+}
+
+if [ -f $F ]; then
+	print_existing
+else
+	find_file
+	print_existing
+fi
