@@ -77,8 +77,7 @@ My git speed dial functions
 
 * `git-lag` - Log All Graph
 
-* `git-less` - Show file starting with certain line
->  It is supposed to receive input from git grip
+* `git-less` - Show a file and go to specific line
 
 * `git-ll` - Print long format log
 
