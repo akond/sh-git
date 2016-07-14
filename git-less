@@ -1,8 +1,7 @@
 #!/bin/bash -e
 
 
-# The motto: Show file starting with certain line
-# Description: It is supposed to receive input from git grip
+# The motto: Show a file and go to specific line
 
 LESS="less -N"
 F=`echo $* | awk -F : '/:/ {print $1 ;} /^[^:]*$/ { print $1; }'`
