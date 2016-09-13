@@ -1,0 +1,6 @@
+#!/bin/bash -e
+
+# The motto: Pull --rebase
+
+git pull --rebase
+

@@ -1,6 +1,20 @@
-#!/bin/bash -e
-
+#!/bin/bash
 
 # The motto: The list of files that have been added in the branch
 
-git log --find-renames=10 --name-status --diff-filter=A --no-decorate  --ignore-missing  --pretty="%n" develop.. | awk '{print $2;}' | grep . | sort -b
+get_parent_brach() {
+	local name=$1
+	local result="master"
+	
+	git show-ref develop
+	if [ "$?" == "0" ]; then
+		result="develop"
+	fi
+	eval "$name='$result'"
+}
+
+get_parent_brach PARENT
+
+set -e
+
+git log --find-renames=10 --name-status --diff-filter=ACM --no-decorate  --ignore-missing  --pretty="%n" $PARENT.. | awk '{print $2;}' | grep . | sort -b | uniq

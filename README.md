@@ -103,6 +103,8 @@ My git speed dial functions
 
 * `git-pl` - Fast-forward only pull
 
+* `git-pr` - Pull --rebase
+
 * `git-return` - Set files to their previous contents.
 
 * `git-sa` - Status of all files

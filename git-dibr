@@ -1,6 +1,19 @@
-#!/bin/bash -e
+#!/bin/bash
 
+#set -x
 
 # The motto: Prints the difference between develop and the current branch
 
-git diff --no-prefix --find-renames=10 -w -U0 $* develop...
+get_parent_brach() {
+	local name=$1
+	local result="master"
+	
+	git show-ref develop
+	if [ "$?" == "0" ]; then
+		result="develop"
+	fi
+	eval "$name='$result'"
+}
+
+get_parent_brach PARENT
+git diff --no-prefix --find-renames=10 -w -U0 $* $PARENT...
