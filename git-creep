@@ -1,0 +1,19 @@
+#!/bin/bash -e
+
+
+# The motto: Commit using the same message as in the last commit.
+
+usecommit=$1
+
+if [ "" == "$usecommit" ]
+then
+    me=`git config --get user.name`
+    usecommit=`git log -1 --author="$me" --format="%H"`
+fi
+
+git commit -m "Placeholder"
+
+message=`mktemp`
+git show --format="%B" --no-notes --no-abbrev -s $usecommit | head -n -1 > $message
+git commit --amend -F $message
+rm $message

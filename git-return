@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 
-# The motto: Set files to their previous contents.
+# The motto: Reset files back to their previous contents.
 COMMIT=$(git rev-parse HEAD)
 
 for i in $*

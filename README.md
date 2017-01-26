@@ -35,6 +35,8 @@ My git speed dial functions
 
 * `git-corb` - Continue rebase
 
+* `git-creep` - Commit using the same message as in the last commit.
+
 * `git-cu` - Commit with the standard message
 
 * `git-dev` - Checkout the develop branch
@@ -105,7 +107,7 @@ My git speed dial functions
 
 * `git-pr` - Pull --rebase
 
-* `git-return` - Set files to their previous contents.
+* `git-return` - Reset files back to their previous contents.
 
 * `git-sa` - Status of all files
 
@@ -124,6 +126,8 @@ My git speed dial functions
 * `git-stp` - STash show Patch
 
 * `git-strm` - STash ReMove
+
+* `git-stu` - Status without untracked files
 
 * `git-sup` - Svn UPdate
 
