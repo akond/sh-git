@@ -73,6 +73,8 @@ My git speed dial functions
 
 * `git-ha` - Show all available commands
 
+* `git-hf` - The alias for `flow hotfix`
+
 * `git-ignore` - Ignore changes in a given file
 
 * `git-kkk` - Header for code review report

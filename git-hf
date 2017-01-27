@@ -1,0 +1,7 @@
+#!/bin/bash -e
+
+
+# The motto: The alias for `flow hotfix`
+
+git flow hotfix $*
+
