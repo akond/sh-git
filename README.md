@@ -7,6 +7,8 @@ My git speed dial functions
 
 * `git-ap` - Interactively add sources to the index
 
+* `git-au` - Add updated files to the index
+
 * `git-bad` - No description yet
 
 * `git-br` - Branch

@@ -3,5 +3,5 @@
 
 # The motto: The alias for `git commit`
 
-git commit $*
+git commit "$@"
 
