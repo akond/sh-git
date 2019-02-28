@@ -29,9 +29,9 @@ My git speed dial functions
 
 * `git-ch` - Checkout from history
 
-* `git-ci` - The alias for `git commit`
+* `git-ci` - Alias for `git commit`
 
-* `git-co` - The alias for `git checkout`
+* `git-co` - Alias for `git checkout`
 
 * `git-cont` - Checks out the latetest stashed commit.
 
@@ -40,6 +40,8 @@ My git speed dial functions
 * `git-creep` - Commit using the same message as in the last commit.
 
 * `git-cu` - Commit with the standard message
+
+* `git-cv` - Alias for `git commit`, but shows a diff when you are editing commit message.
 
 * `git-dev` - Checkout the develop branch
 
@@ -76,8 +78,6 @@ My git speed dial functions
 * `git-ha` - Show all available commands
 
 * `git-hf` - The alias for `flow hotfix`
-
-* `git-ignore` - Ignore changes in a given file
 
 * `git-kkk` - Header for code review report
 

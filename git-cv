@@ -1,0 +1,7 @@
+#!/bin/bash -e
+
+
+# The motto: Alias for `git commit`, but shows a diff when you are editing commit message.
+
+git commit -v "$@"
+

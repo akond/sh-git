@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# The motto: The alias for `git checkout`
+# The motto: Alias for `git checkout`
 
 source $(dirname $0)/colors
 

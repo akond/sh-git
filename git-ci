@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 
-# The motto: The alias for `git commit`
+# The motto: Alias for `git commit`
 
 git commit "$@"
 
